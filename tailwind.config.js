@@ -7,7 +7,7 @@ module.exports = {
     extend: {
       fontFamily:{
         "comforter":['Comforter Brush','cursive'],
-        "miniver":['Miniver','cursive'],
+        "calli":['Calligraffitti','cursive'],
       },
       colors:{
         "primary":"#ac3b61",

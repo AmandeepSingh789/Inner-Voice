@@ -1,6 +1,7 @@
 import React,{useState} from 'react'
 import {FaBars,FaTimes} from 'react-icons/fa'
 import logo from  '../assets/Inner Voice.png'
+import {Link} from 'react-scroll';
 const Navbar = () => {
 
     const [nav,SetNav] = useState(false)
@@ -11,19 +12,21 @@ const Navbar = () => {
 
   return (
     <div className="fixed w-full h-[80px] flex justify-between items-center  text-gray-300 text-secondary font-comforter">
-        <div className='text-4xl mx-4 text-primary mt-12'>
+        <div className='text-4xl mx-4 text-primary mt-12 lg:ml-12'>
             <img src={logo} alt="Inner Voice" width={200} height={200} />
         </div>
 
         <ul className='hidden md:flex animate-fade-in-down mr-20' >
             <li className=' transition ease-in-out delay-100 text-3xl hover:text-primary mx-2'>
-                Home
+                <Link to ="/">Home</Link>
+                
             </li>
             <li className=' transition ease-in-out delay-100 text-3xl hover:text-primary mx-2'>
-                Home
+            <Link to ="/">Sign In</Link>
+                
             </li>
             <li className=' transition ease-in-out delay-100 text-3xl hover:text-primary mx-2'>
-                Home
+            <Link to ="/">Sign Up</Link>
             </li>
 
         </ul>
@@ -35,9 +38,9 @@ const Navbar = () => {
         <ul className={!nav ? 'hidden' : 'absolute top-0 left-0 w-full h-screen bg-background flex flex-col justify-center items-center  '} >
         <li className=' transition ease-in-out delay-100 py-6 text-4xl' >Home</li>
 
-        <li className=' transition ease-in-out delay-100 py-6 text-4xl' >Home</li>
+        <li className=' transition ease-in-out delay-100 py-6 text-4xl' >Sign In</li>
 
-        <li className=' transition ease-in-out delay-100 py-6 text-4xl' >Home</li>
+        <li className=' transition ease-in-out delay-100 py-6 text-4xl' >Sign Up</li>
 
         </ul>
     </div>
