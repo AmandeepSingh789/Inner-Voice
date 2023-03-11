@@ -9,6 +9,7 @@ import {
   Route,
   Link,
 } from "react-router-dom";
+import ErrorPage from "./routes/ErrorPage";
 function App() {
   const router = createBrowserRouter([
     {
@@ -28,9 +29,10 @@ function App() {
   ]);
   return (
     <div className="App">
+      <RouterProvider router={router} />
       <div >
-        <Navbar />
-        <RouterProvider router={router} />
+        
+        
       </div>
       
     </div>

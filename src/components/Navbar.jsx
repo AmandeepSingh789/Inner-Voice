@@ -1,7 +1,8 @@
 import React,{useState} from 'react'
+import { Link } from 'react-router-dom'
 import {FaBars,FaTimes} from 'react-icons/fa'
 import logo from  '../assets/Inner Voice.png'
-import { Link } from 'react-router-dom'
+
 
 const Navbar = () => {
 
@@ -19,13 +20,22 @@ const Navbar = () => {
 
         <ul className='hidden md:flex animate-fade-in-down mr-20' >
             <li className=' transition ease-in-out delay-100 text-3xl hover:text-primary mx-2 cursor-pointer'>
+            
+            <Link to = "/">
             Home
+            </Link>
+            
             </li>
             <li className=' transition ease-in-out delay-100 text-3xl hover:text-primary mx-2'>
+                
+                <Link to = "signin">
                 Sign In
+            </Link>
             </li>
             <li className=' transition ease-in-out delay-100 text-3xl hover:text-primary mx-2'>
+            <Link to = "signup">
                 Sign Up
+            </Link>
             </li>
 
         </ul>
