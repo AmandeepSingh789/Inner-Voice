@@ -1,23 +1,36 @@
-import { BrowserRouter,Route,Routes } from "react-router-dom";
+
 import Navbar from "./components/Navbar";
 import Home from "./routes/Home";
 import SignUp from "./routes/SignUp";
 import SignIn from "./routes/SignIn";
-
-
-import {Link} from 'react-scroll';
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Route,
+  Link,
+} from "react-router-dom";
 function App() {
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: (
+        <Home />
+      ),
+    },
+    {
+      path: "/signin",
+      element:( <SignIn />),
+    },
+    {
+      path: "/signup",
+      element: (<SignUp />),
+    },
+  ]);
   return (
     <div className="App">
       <div >
         <Navbar />
-        <BrowserRouter>
-          <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/signin' element={<SignIn />} />
-            <Route path='/signup' element={<SignUp />} />
-          </Routes>
-          </BrowserRouter>
+        <RouterProvider router={router} />
       </div>
       
     </div>
