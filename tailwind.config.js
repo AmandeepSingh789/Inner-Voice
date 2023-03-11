@@ -5,6 +5,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily:{
+        "comforter":['Comforter Brush','cursive'],
+      },
       colors:{
         "primary":"#ac3b61",
         "secondary":"#123c69",
@@ -14,6 +17,7 @@ module.exports = {
         
       },
     },
+    
   },
   plugins: [],
 }
