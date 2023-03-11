@@ -1,6 +1,7 @@
 import React,{useState} from 'react'
 import { AiFillLock, AiOutlineMail } from 'react-icons/ai'
 import Navbar from '../components/Navbar'
+
 const SignIn = () => {
     const [email,setEmail] = useState('')
   const [password,setPassword] = useState('')
@@ -24,7 +25,7 @@ const SignIn = () => {
   return (
       
     <div className='w-full h-screen bg-background  '>
-<Navbar />
+<Navbar home =".." signinpage="/" signuppage="../signup"/>
 <div className="max-w-[1000px] mx-auto px-8 flex flex-col justify-start align-center h-full font-calli">
 
 <h1 className=' mt-40 self-center text-5xl text-primary '>Sign In</h1>

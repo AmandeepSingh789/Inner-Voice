@@ -4,7 +4,7 @@ import {FaBars,FaTimes} from 'react-icons/fa'
 import logo from  '../assets/Inner Voice.png'
 
 
-const Navbar = () => {
+const Navbar = ({home,signinpage,signuppage}) => {
 
     const [nav,SetNav] = useState(false)
     const handleClick =()=>
@@ -21,19 +21,19 @@ const Navbar = () => {
         <ul className='hidden md:flex animate-fade-in-down mr-20' >
             <li className=' transition ease-in-out delay-100 text-3xl hover:text-primary mx-2 cursor-pointer'>
             
-            <Link to = "/">
+            <Link to = {home}>
             Home
             </Link>
             
             </li>
             <li className=' transition ease-in-out delay-100 text-3xl hover:text-primary mx-2'>
                 
-                <Link to = "signin">
+                <Link to = {signinpage}>
                 Sign In
             </Link>
             </li>
             <li className=' transition ease-in-out delay-100 text-3xl hover:text-primary mx-2'>
-            <Link to = "signup">
+            <Link to = {signuppage}>
                 Sign Up
             </Link>
             </li>
